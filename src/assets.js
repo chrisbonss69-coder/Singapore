@@ -1,0 +1,4 @@
+const EARTH_DOCUMENT=null;
+const ASSETS={"nus":"media/hd/nus.webm","city":"media/hd/city.webm","aerial":"media/hd/aerial.webm","garden":"media/hd/garden.webm","heart-art":"media/artwork/heart-anatomical.webp","stethoscope-art":"media/artwork/stethoscope.webp","wing-1":"media/wing/wing-1.webp","wing-2":"media/wing/wing-2.webp","wing-3":"media/wing/wing-3.webp"};
+const CREATOR_CLIPS=[];
+const WING_PHOTOS=[{"key":"wing-1","caption":"WING team \u00b7 2026","description":"WING team at Kallang Bowl, 2026","url":"https://wing.comp.nus.edu.sg/gallery/"},{"key":"wing-2","caption":"Multilingual QA demo \u00b7 2025","description":"WING demonstrates Multilingual QA Check at NUS, 2025","url":"https://wing.comp.nus.edu.sg/post/25-03-20-pres-demo-ctic/"},{"key":"wing-3","caption":"CAPRI research \u00b7 2026","description":"Yisong Miao presents CAPRI language model research at NUS SRI, 2026","url":"https://wing.comp.nus.edu.sg/event/26-07-02-capri-presentation-sri/"}];

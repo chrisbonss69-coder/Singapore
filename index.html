@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Singapore · A research internship</title>
+ <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+ <main id="film" aria-label="A personal AI research journey to Singapore">
+  <div id="visual">
+   <iframe id="earth" class="layer" title="3D Earth and satellite" tabindex="-1" aria-hidden="true"></iframe>
+   <canvas id="digital" aria-hidden="true" hidden></canvas>
+   <div id="exhibit" class="layer illustration" hidden>
+    <div id="health-exhibit" hidden>
+     <img id="stethoscope" alt="Stethoscope" data-art="stethoscope-art">
+     <img id="heart" alt="Anatomical illustration of a beating human heart" data-art="heart-art">
+     <div class="health-monitor" role="img" aria-label="Illustrative electrocardiogram">
+      <span class="health-symbol" aria-hidden="true"></span>
+      <span class="health-monitor-label" aria-hidden="true">ECG</span>
+      <div class="health-trace">
+       <canvas id="ecg" width="640" height="240" aria-hidden="true"></canvas>
+      </div>
+     </div>
+    </div>
+    <canvas id="book" aria-label="Three-dimensional open book with animated pages of matrix calculations" hidden></canvas>
+    <canvas id="environment" aria-label="Rotating three-dimensional model with wind turbines and solar panels" hidden></canvas>
+    <div id="book-fallback" hidden>
+     <p>Matrix multiplication</p>
+     <p>[ 1  2 ] [ 2  0 ] &nbsp; = &nbsp; [ 4  2 ]<br>[ 0  1 ] [ 1  1 ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 1  1 ]</p>
+    </div>
+   </div>
+   <div id="creator-intro" class="layer illustration" hidden>
+    <p class="bridge-question">Can I trust the<br>explanation?</p>
+   </div>
+   <section id="project" class="layer" aria-labelledby="physics-question" hidden>
+    <div class="fringes" aria-hidden="true"></div>
+    <div class="experiment">
+     <h2 id="physics-question">How can two light waves create bright and dark bands?</h2>
+     <p class="model">Same language model</p>
+     <div class="conditions">
+      <div class="condition">Without course notes</div>
+      <div class="condition has-notes">With trusted course notes</div>
+     </div>
+     <div class="criteria" aria-label="What I would check">
+      <span>Correct answer?</span>
+      <span>Does the source support it?</span>
+     </div>
+    </div>
+   </section>
+   <div id="wing" class="layer illustration" hidden>
+    <div class="wing-research">
+     <div class="wing-sign">
+      <strong>WING</strong>
+      <span>NUS Computing</span>
+     </div>
+     <div id="wing-photos" class="wing-photos" aria-label="Photographs connected with WING"></div>
+    </div>
+    <div class="wing-assistant">
+     <canvas id="wing-robot" aria-label="3D illustration of a language assistant"></canvas>
+     <span class="illustration-label">Language assistant · 3D illustration</span>
+    </div>
+   </div>
+   <video id="video" class="layer" muted playsinline preload="auto" aria-label="Local presentation footage"></video>
+   <div id="arrival-wash" aria-hidden="true"></div>
+  </div>
+
+  <footer id="footer">
+   <div class="caption">
+    <h1 id="title"></h1>
+    <p id="detail"></p>
+   </div>
+   <nav class="controls" aria-label="Presentation controls">
+    <button id="prev" type="button" aria-label="Previous cue" title="Previous cue (←)">‹</button>
+    <span id="count" aria-label="Scene number"></span>
+    <button id="next" type="button" aria-label="Next cue" title="Next cue (→)">›</button>
+    <button id="pause" type="button" aria-label="Pause" title="Pause (Space)" aria-pressed="false"><span aria-hidden="true"></span></button>
+    <button id="full" type="button" aria-label="Fullscreen" title="Fullscreen (F)">⛶</button>
+    <button id="info" type="button" aria-label="Controls and sources" title="Controls and sources (H)">?</button>
+   </nav>
+  </footer>
+
+  <div id="progress" aria-hidden="true"></div>
+  <div id="boot" role="status">
+   <p id="boot-message">Ouverture du diaporama…</p>
+   <noscript><p>Ouvre le fichier HTML enregistré dans Firefox ou Chrome pour lancer le diaporama.</p></noscript>
+  </div>
+  <div id="notice" role="alert" hidden></div>
+  <section id="hd-setup" aria-labelledby="hd-heading" lang="fr" hidden>
+   <div class="hd-card">
+    <h2 id="hd-heading">Démarrer Singapour CC3 en Full HD</h2>
+    <p>Sélectionne les deux ZIP HD d’origine. Tu pourras ensuite lancer le diaporama ou enregistrer le HTML complet pour les prochaines ouvertures.</p>
+    <ul>
+     <li>Singapour_CC3_HD_Ville.zip</li>
+     <li>Singapour_CC3_HD_Campus_Arrivee_Final.zip</li>
+    </ul>
+    <label for="hd-files">Choisir les deux ZIP HD ou les quatre vidéos WebM</label>
+    <input id="hd-files" type="file" accept=".zip,.webm" multiple>
+    <noscript><p>Ouvre ce fichier HTML dans Firefox ou Chrome avec JavaScript activé pour importer les vidéos.</p></noscript>
+    <p id="hd-status" role="status" aria-live="polite"></p>
+    <div id="hd-actions" hidden>
+     <button id="hd-start" type="button">Lancer le diaporama</button>
+     <button id="hd-save" type="button">Enregistrer le HTML complet</button>
+    </div>
+    <details class="hd-transfer">
+     <summary>Copier le lanceur sur ton ordinateur</summary>
+     <p>Copie le HTML, colle-le dans un éditeur de texte et enregistre le fichier sous <strong>Singapour_CC3.html</strong>. Ouvre-le dans Firefox ou Chrome et sélectionne tes ZIP HD.</p>
+     <button id="hd-copy" type="button">Copier le HTML du lanceur</button>
+     <p id="hd-copy-status" role="status"></p>
+     <textarea id="hd-copy-source" aria-label="Code HTML du lanceur" rows="4" wrap="off" readonly hidden></textarea>
+    </details>
+   </div>
+  </section>
+  <dialog id="guide">
+   <h2>Controls and sources</h2>
+   <p>Click the scene or use <kbd>→</kbd> or <kbd>Page Down</kbd> to advance. Use <kbd>←</kbd> or <kbd>Page Up</kbd> to return. <kbd>Space</kbd> pauses. <kbd>F</kbd> opens fullscreen. <kbd>R</kbd> restarts. <kbd>H</kbd> opens or closes this panel.</p>
+   <p>On scene 2, the heart, book and renewable-energy model appear in sequence. Advance after the environment line. The NUS campus and WING have separate cues. The Toulouse–Singapore journey starts on your cue. Footage is local and silent.</p>
+   <h3>Creator videos</h3>
+   <p id="creator-note">The transition is available for rehearsal while the creator clips are being sourced.</p>
+   <ul id="creator-credits" hidden></ul>
+   <h3>Research</h3>
+   <p>SciWING is a toolkit for scientific document processing from the WING group at NUS. The physics experiment is a proposed internship project. <a href="https://github.com/abhinavkashyap/sciwing" target="_blank" rel="noopener noreferrer">SciWING project</a> · <a href="https://wing.comp.nus.edu.sg/" target="_blank" rel="noopener noreferrer">WING</a></p>
+   <ul id="wing-photo-credits" hidden></ul>
+   <h3>Footage and illustrations</h3>
+   <table>
+    <thead><tr><th scope="col">Scene</th><th scope="col">Source</th></tr></thead>
+    <tbody>
+     <tr><td>Globe</td><td>Original presentation animation. <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/">NASA Blue Marble Next Generation</a>, July 2004.</td></tr>
+     <tr><td>Arrival</td><td>Timberland Pham, 2017, Marina Bay aerial, 01:32–01:39. <a href="https://commons.wikimedia.org/wiki/File:DJI_Mavic_Pro_in_Marina_Bay_Singapore_2017_Awesome_4k_view.webm">Clip</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></td></tr>
+     <tr><td>NUS campus</td><td>Bensen Hsu, “NUS campus tour with a drone”, 01:39–01:51. <a href="https://youtu.be/m4QXch3Ze2U?si=DankKnxftECEBS_q">Video</a></td></tr>
+     <tr><td>Chinatown</td><td>POPtravel, 2023, 00:20–00:25.2. <a href="https://commons.wikimedia.org/wiki/File:SINGAPORE_-_Chinatown_at_Night_-_4K_60fps_(UHD).webm">Clip</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></td></tr>
+     <tr><td>Marina Bay</td><td>Shlok Rana, 2025. <a href="https://www.pexels.com/video/marina-bay-sands-at-night-in-singapore-34339350/">Clip</a> · <a href="https://www.pexels.com/license/">Pexels licence</a></td></tr>
+     <tr><td>Spectra</td><td>Supplied excerpt “Singapore - SPECTRA Light and Water Show - Marina Bay Sands”, 09:59–10:05.8. <a href="https://www.marinabaysands.com/attractions/spectra.html">Spectra</a></td></tr>
+     <tr><td>Garden Rhapsody</td><td>Supplied excerpt “Singapore Supertree Light Show Garden Rhapsody at Gardens by the Bay”, 09:42–09:58. <a href="https://www.gardensbythebay.com.sg/en/things-to-do/calendar-of-events/garden-rhapsody.html">Garden Rhapsody</a></td></tr>
+     <tr><td>Illustrations</td><td>Original digital skyline, generated anatomical heart and stethoscope, and real-time 3D models. The robot illustrates a language assistant. <a href="https://threejs.org/">Three.js</a>, MIT licence.</td></tr>
+    </tbody>
+   </table>
+   <p>Additional reference supplied with the project. <a href="https://youtu.be/rmxNPzpuFB4?si=uFeKTENYMXEelLrG" target="_blank" rel="noopener noreferrer">YouTube link</a></p>
+   <button id="close" type="button">Return to the presentation</button>
+  </dialog>
+ </main>
+ <script src="src/three.min.js"></script>
+<script src="src/assets.js"></script>
+<script src="src/digital_scene.js"></script>
+<script src="src/science_scene.js"></script>
+<script src="src/environment_scene.js"></script>
+<script src="src/wing_robot.js"></script>
+<script src="src/controller.js"></script>
+</body>
+</html>
